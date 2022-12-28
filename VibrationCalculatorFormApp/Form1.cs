@@ -20,6 +20,7 @@ namespace VibrationCalculatorFormApp {
         }
 
         private void TSensitivity_TextChanged(object sender, EventArgs e) {
+            
             Sensitivity sensitivity = new Sensitivity();
             if (radSensitivityG.Checked) {
                 sensitivity.Set_mV_G(double.Parse(TSensitivity.Text));
@@ -36,8 +37,11 @@ namespace VibrationCalculatorFormApp {
             if (radDispSensFreq.Checked) {
                 VibroCalc.CalcAll(sensitivity, Freeze.Displacement);
             }
-
+             
         }
 
+        private void TFrequency_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace VibrationCalculatorFormApp {
                 LastText = Text;
                 this.SelectionStart = Text.Length;
                 base.OnTextChanged(e);
+                
             }
         }
         protected override void OnKeyPress(KeyPressEventArgs e) {

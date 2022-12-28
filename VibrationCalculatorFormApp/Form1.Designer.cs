@@ -158,6 +158,7 @@ namespace VibrationCalculatorFormApp {
             this.TFrequency.Size = new System.Drawing.Size(89, 20);
             this.TFrequency.TabIndex = 7;
             this.TFrequency.Text = "159,2";
+            this.TFrequency.TextChanged += new System.EventHandler(this.TFrequency_TextChanged);
             // 
             // groupBox4
             // 

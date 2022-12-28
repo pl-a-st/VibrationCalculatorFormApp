@@ -44,8 +44,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VibroMath">
-      <HintPath>..\..\VibCalculator\VibroMath\bin\Debug\VibroMath.dll</HintPath>
+    <Reference Include="VibroMath, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\VibCalculator\VibroMath\bin\Release\VibroMath.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
