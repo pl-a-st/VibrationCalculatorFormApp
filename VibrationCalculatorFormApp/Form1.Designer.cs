@@ -24,43 +24,20 @@ namespace VibrationCalculatorFormApp {
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
-            this.channelCount = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radSensitivityMkm = new System.Windows.Forms.RadioButton();
-            this.radSensitivityMm = new System.Windows.Forms.RadioButton();
-            this.BSensitivityCopy = new System.Windows.Forms.Button();
-            this.TSensitivity = new System.Windows.Forms.TextBox();
+            this.TSensitivity = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.radSensitivityM = new System.Windows.Forms.RadioButton();
             this.radSensitivityG = new System.Windows.Forms.RadioButton();
-            this.button10 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radFrequencyRPM = new System.Windows.Forms.RadioButton();
             this.radFrequencyHw = new System.Windows.Forms.RadioButton();
-            this.TFrequency = new System.Windows.Forms.TextBox();
-            this.BFrequencyCopy = new System.Windows.Forms.Button();
+            this.TFrequency = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radVoltagePikPik = new System.Windows.Forms.RadioButton();
             this.radVoltagePik = new System.Windows.Forms.RadioButton();
             this.radVoltageRMS = new System.Windows.Forms.RadioButton();
-            this.TVoltage = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.channelCenter2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.channelWidth = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.channelCenter1 = new System.Windows.Forms.TextBox();
-            this.boundaryFrequency = new System.Windows.Forms.TextBox();
-            this.TVoltage_dB = new System.Windows.Forms.TextBox();
+            this.TVoltage = new VibrationCalculatorFormApp.ModifiedTextBox();
+            this.TVoltage_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radDispSensFreq = new System.Windows.Forms.RadioButton();
             this.radVelSensFreq = new System.Windows.Forms.RadioButton();
@@ -69,53 +46,35 @@ namespace VibrationCalculatorFormApp {
             this.radiDisplacementPikPik = new System.Windows.Forms.RadioButton();
             this.radDisplacementPik = new System.Windows.Forms.RadioButton();
             this.radDisplacementRMS = new System.Windows.Forms.RadioButton();
-            this.TDisplacement = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.TDisplacement_dB = new System.Windows.Forms.TextBox();
+            this.TDisplacement = new VibrationCalculatorFormApp.ModifiedTextBox();
+            this.TDisplacement_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.gBVelocity = new System.Windows.Forms.GroupBox();
             this.radVelocityPikPik = new System.Windows.Forms.RadioButton();
             this.radVelocityPik = new System.Windows.Forms.RadioButton();
             this.radVelocityRMS = new System.Windows.Forms.RadioButton();
-            this.TVelocity = new System.Windows.Forms.TextBox();
-            this.BVelocity_dBCopy = new System.Windows.Forms.Button();
-            this.BVelocityCopy = new System.Windows.Forms.Button();
-            this.TVelocity_dB = new System.Windows.Forms.TextBox();
+            this.TVelocity = new VibrationCalculatorFormApp.ModifiedTextBox();
+            this.TVelocity_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.gBAcceleration = new System.Windows.Forms.GroupBox();
             this.radAccelerationPikPik = new System.Windows.Forms.RadioButton();
             this.radAccelerationPik = new System.Windows.Forms.RadioButton();
             this.radAccelerationRMS = new System.Windows.Forms.RadioButton();
-            this.button8 = new System.Windows.Forms.Button();
-            this.BAccelerationCopy = new System.Windows.Forms.Button();
-            this.TAcceleration = new System.Windows.Forms.TextBox();
-            this.TAcceleration_dB = new System.Windows.Forms.TextBox();
+            this.TAcceleration = new VibrationCalculatorFormApp.ModifiedTextBox();
+            this.TAcceleration_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.GBDisplacement.SuspendLayout();
             this.gBVelocity.SuspendLayout();
             this.gBAcceleration.SuspendLayout();
             this.SuspendLayout();
             // 
-            // channelCount
-            // 
-            this.channelCount.Location = new System.Drawing.Point(54, 42);
-            this.channelCount.Name = "channelCount";
-            this.channelCount.Size = new System.Drawing.Size(63, 20);
-            this.channelCount.TabIndex = 8;
-            this.channelCount.Text = "1600";
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radSensitivityMkm);
-            this.groupBox2.Controls.Add(this.radSensitivityMm);
-            this.groupBox2.Controls.Add(this.BSensitivityCopy);
             this.groupBox2.Controls.Add(this.TSensitivity);
             this.groupBox2.Controls.Add(this.radSensitivityM);
             this.groupBox2.Controls.Add(this.radSensitivityG);
@@ -126,35 +85,6 @@ namespace VibrationCalculatorFormApp {
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "КП датчика";
             // 
-            // radSensitivityMkm
-            // 
-            this.radSensitivityMkm.AutoSize = true;
-            this.radSensitivityMkm.Location = new System.Drawing.Point(125, 69);
-            this.radSensitivityMkm.Name = "radSensitivityMkm";
-            this.radSensitivityMkm.Size = new System.Drawing.Size(67, 17);
-            this.radSensitivityMkm.TabIndex = 15;
-            this.radSensitivityMkm.Text = "мВ/мкм";
-            this.radSensitivityMkm.UseVisualStyleBackColor = true;
-            // 
-            // radSensitivityMm
-            // 
-            this.radSensitivityMm.AutoSize = true;
-            this.radSensitivityMm.Location = new System.Drawing.Point(125, 46);
-            this.radSensitivityMm.Name = "radSensitivityMm";
-            this.radSensitivityMm.Size = new System.Drawing.Size(74, 17);
-            this.radSensitivityMm.TabIndex = 14;
-            this.radSensitivityMm.Text = "мВ/м•с ̄ ¹";
-            this.radSensitivityMm.UseVisualStyleBackColor = true;
-            // 
-            // BSensitivityCopy
-            // 
-            this.BSensitivityCopy.Location = new System.Drawing.Point(123, 17);
-            this.BSensitivityCopy.Name = "BSensitivityCopy";
-            this.BSensitivityCopy.Size = new System.Drawing.Size(76, 22);
-            this.BSensitivityCopy.TabIndex = 13;
-            this.BSensitivityCopy.Text = "Копировать";
-            this.BSensitivityCopy.UseVisualStyleBackColor = true;
-            // 
             // TSensitivity
             // 
             this.TSensitivity.Location = new System.Drawing.Point(31, 19);
@@ -162,11 +92,13 @@ namespace VibrationCalculatorFormApp {
             this.TSensitivity.Size = new System.Drawing.Size(86, 20);
             this.TSensitivity.TabIndex = 12;
             this.TSensitivity.Text = "100";
+            this.TSensitivity.TextChanged += new System.EventHandler(this.TSensitivity_TextChanged);
+            this.TSensitivity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TSensitivity_KeyPress);
             // 
             // radSensitivityM
             // 
             this.radSensitivityM.AutoSize = true;
-            this.radSensitivityM.Location = new System.Drawing.Point(31, 69);
+            this.radSensitivityM.Location = new System.Drawing.Point(106, 46);
             this.radSensitivityM.Name = "radSensitivityM";
             this.radSensitivityM.Size = new System.Drawing.Size(74, 17);
             this.radSensitivityM.TabIndex = 11;
@@ -185,21 +117,11 @@ namespace VibrationCalculatorFormApp {
             this.radSensitivityG.Text = "мВ/g";
             this.radSensitivityG.UseVisualStyleBackColor = true;
             // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(618, 190);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(76, 22);
-            this.button10.TabIndex = 16;
-            this.button10.Text = "Копировать";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.radFrequencyRPM);
             this.groupBox3.Controls.Add(this.radFrequencyHw);
             this.groupBox3.Controls.Add(this.TFrequency);
-            this.groupBox3.Controls.Add(this.BFrequencyCopy);
             this.groupBox3.Location = new System.Drawing.Point(310, 42);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 72);
@@ -237,22 +159,12 @@ namespace VibrationCalculatorFormApp {
             this.TFrequency.TabIndex = 7;
             this.TFrequency.Text = "159,2";
             // 
-            // BFrequencyCopy
-            // 
-            this.BFrequencyCopy.Location = new System.Drawing.Point(101, 19);
-            this.BFrequencyCopy.Name = "BFrequencyCopy";
-            this.BFrequencyCopy.Size = new System.Drawing.Size(76, 22);
-            this.BFrequencyCopy.TabIndex = 8;
-            this.BFrequencyCopy.Text = "Копировать";
-            this.BFrequencyCopy.UseVisualStyleBackColor = true;
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.radVoltagePikPik);
             this.groupBox4.Controls.Add(this.radVoltagePik);
             this.groupBox4.Controls.Add(this.radVoltageRMS);
             this.groupBox4.Controls.Add(this.TVoltage);
-            this.groupBox4.Controls.Add(this.button9);
             this.groupBox4.Location = new System.Drawing.Point(516, 98);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(188, 72);
@@ -299,171 +211,6 @@ namespace VibrationCalculatorFormApp {
             this.TVoltage.Size = new System.Drawing.Size(90, 20);
             this.TVoltage.TabIndex = 7;
             this.TVoltage.Text = "100";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(102, 17);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(76, 22);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Копировать";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 142);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "F2, Гц";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 116);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "F1, Гц";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(123, 139);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(76, 22);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "Копировать";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(123, 111);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 22);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Копировать";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(123, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 22);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Копировать";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(123, 42);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 22);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Копировать";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(123, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 22);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Копировать";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // channelCenter2
-            // 
-            this.channelCenter2.Location = new System.Drawing.Point(54, 139);
-            this.channelCenter2.Name = "channelCenter2";
-            this.channelCenter2.ReadOnly = true;
-            this.channelCenter2.Size = new System.Drawing.Size(63, 20);
-            this.channelCenter2.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 97);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Ближайшие центры каналов";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "ΔF, Гц";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "N, линий";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Fгр, Гц";
-            // 
-            // channelWidth
-            // 
-            this.channelWidth.Location = new System.Drawing.Point(54, 68);
-            this.channelWidth.Name = "channelWidth";
-            this.channelWidth.ReadOnly = true;
-            this.channelWidth.Size = new System.Drawing.Size(63, 20);
-            this.channelWidth.TabIndex = 8;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Controls.Add(this.label7);
-            this.groupBox8.Controls.Add(this.button7);
-            this.groupBox8.Controls.Add(this.button4);
-            this.groupBox8.Controls.Add(this.button3);
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.button1);
-            this.groupBox8.Controls.Add(this.channelCenter2);
-            this.groupBox8.Controls.Add(this.label5);
-            this.groupBox8.Controls.Add(this.channelCenter1);
-            this.groupBox8.Controls.Add(this.label3);
-            this.groupBox8.Controls.Add(this.label2);
-            this.groupBox8.Controls.Add(this.label1);
-            this.groupBox8.Controls.Add(this.channelWidth);
-            this.groupBox8.Controls.Add(this.channelCount);
-            this.groupBox8.Controls.Add(this.boundaryFrequency);
-            this.groupBox8.Location = new System.Drawing.Point(516, 228);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(210, 181);
-            this.groupBox8.TabIndex = 20;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Автоспектры";
-            // 
-            // channelCenter1
-            // 
-            this.channelCenter1.Location = new System.Drawing.Point(54, 113);
-            this.channelCenter1.Name = "channelCenter1";
-            this.channelCenter1.ReadOnly = true;
-            this.channelCenter1.Size = new System.Drawing.Size(63, 20);
-            this.channelCenter1.TabIndex = 10;
-            // 
-            // boundaryFrequency
-            // 
-            this.boundaryFrequency.Location = new System.Drawing.Point(54, 16);
-            this.boundaryFrequency.Name = "boundaryFrequency";
-            this.boundaryFrequency.Size = new System.Drawing.Size(63, 20);
-            this.boundaryFrequency.TabIndex = 8;
-            this.boundaryFrequency.Text = "1600";
             // 
             // TVoltage_dB
             // 
@@ -522,8 +269,6 @@ namespace VibrationCalculatorFormApp {
             this.GBDisplacement.Controls.Add(this.radDisplacementPik);
             this.GBDisplacement.Controls.Add(this.radDisplacementRMS);
             this.GBDisplacement.Controls.Add(this.TDisplacement);
-            this.GBDisplacement.Controls.Add(this.button5);
-            this.GBDisplacement.Controls.Add(this.button6);
             this.GBDisplacement.Controls.Add(this.TDisplacement_dB);
             this.GBDisplacement.Controls.Add(this.label10);
             this.GBDisplacement.Location = new System.Drawing.Point(25, 175);
@@ -572,24 +317,6 @@ namespace VibrationCalculatorFormApp {
             this.TDisplacement.Size = new System.Drawing.Size(86, 20);
             this.TDisplacement.TabIndex = 7;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(98, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(76, 22);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Копировать";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(305, 21);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(76, 22);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Копировать";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // TDisplacement_dB
             // 
             this.TDisplacement_dB.Location = new System.Drawing.Point(210, 21);
@@ -612,8 +339,6 @@ namespace VibrationCalculatorFormApp {
             this.gBVelocity.Controls.Add(this.radVelocityPik);
             this.gBVelocity.Controls.Add(this.radVelocityRMS);
             this.gBVelocity.Controls.Add(this.TVelocity);
-            this.gBVelocity.Controls.Add(this.BVelocity_dBCopy);
-            this.gBVelocity.Controls.Add(this.BVelocityCopy);
             this.gBVelocity.Controls.Add(this.TVelocity_dB);
             this.gBVelocity.Controls.Add(this.label8);
             this.gBVelocity.Location = new System.Drawing.Point(25, 97);
@@ -662,24 +387,6 @@ namespace VibrationCalculatorFormApp {
             this.TVelocity.Size = new System.Drawing.Size(86, 20);
             this.TVelocity.TabIndex = 7;
             // 
-            // BVelocity_dBCopy
-            // 
-            this.BVelocity_dBCopy.Location = new System.Drawing.Point(305, 19);
-            this.BVelocity_dBCopy.Name = "BVelocity_dBCopy";
-            this.BVelocity_dBCopy.Size = new System.Drawing.Size(76, 22);
-            this.BVelocity_dBCopy.TabIndex = 8;
-            this.BVelocity_dBCopy.Text = "Копировать";
-            this.BVelocity_dBCopy.UseVisualStyleBackColor = true;
-            // 
-            // BVelocityCopy
-            // 
-            this.BVelocityCopy.Location = new System.Drawing.Point(98, 17);
-            this.BVelocityCopy.Name = "BVelocityCopy";
-            this.BVelocityCopy.Size = new System.Drawing.Size(76, 22);
-            this.BVelocityCopy.TabIndex = 8;
-            this.BVelocityCopy.Text = "Копировать";
-            this.BVelocityCopy.UseVisualStyleBackColor = true;
-            // 
             // TVelocity_dB
             // 
             this.TVelocity_dB.Location = new System.Drawing.Point(210, 19);
@@ -701,8 +408,6 @@ namespace VibrationCalculatorFormApp {
             this.gBAcceleration.Controls.Add(this.radAccelerationPikPik);
             this.gBAcceleration.Controls.Add(this.radAccelerationPik);
             this.gBAcceleration.Controls.Add(this.radAccelerationRMS);
-            this.gBAcceleration.Controls.Add(this.button8);
-            this.gBAcceleration.Controls.Add(this.BAccelerationCopy);
             this.gBAcceleration.Controls.Add(this.TAcceleration);
             this.gBAcceleration.Controls.Add(this.TAcceleration_dB);
             this.gBAcceleration.Controls.Add(this.label4);
@@ -745,24 +450,6 @@ namespace VibrationCalculatorFormApp {
             this.radAccelerationRMS.Text = "СКЗ";
             this.radAccelerationRMS.UseVisualStyleBackColor = true;
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(305, 17);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(76, 22);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Копировать";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // BAccelerationCopy
-            // 
-            this.BAccelerationCopy.Location = new System.Drawing.Point(98, 17);
-            this.BAccelerationCopy.Name = "BAccelerationCopy";
-            this.BAccelerationCopy.Size = new System.Drawing.Size(76, 22);
-            this.BAccelerationCopy.TabIndex = 8;
-            this.BAccelerationCopy.Text = "Копировать";
-            this.BAccelerationCopy.UseVisualStyleBackColor = true;
-            // 
             // TAcceleration
             // 
             this.TAcceleration.Location = new System.Drawing.Point(6, 19);
@@ -801,10 +488,8 @@ namespace VibrationCalculatorFormApp {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button10);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.TVoltage_dB);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
@@ -816,8 +501,6 @@ namespace VibrationCalculatorFormApp {
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.GBDisplacement.ResumeLayout(false);
@@ -832,44 +515,20 @@ namespace VibrationCalculatorFormApp {
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox channelCount;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radSensitivityMkm;
-        private System.Windows.Forms.RadioButton radSensitivityMm;
-        private System.Windows.Forms.Button BSensitivityCopy;
-        private System.Windows.Forms.TextBox TSensitivity;
+        private ModifiedTextBox TSensitivity;
         private System.Windows.Forms.RadioButton radSensitivityM;
         private System.Windows.Forms.RadioButton radSensitivityG;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton radFrequencyRPM;
         private System.Windows.Forms.RadioButton radFrequencyHw;
-        private System.Windows.Forms.TextBox TFrequency;
-        private System.Windows.Forms.Button BFrequencyCopy;
+        private ModifiedTextBox TFrequency;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radVoltagePikPik;
         private System.Windows.Forms.RadioButton radVoltagePik;
         private System.Windows.Forms.RadioButton radVoltageRMS;
-        private System.Windows.Forms.TextBox TVoltage;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox channelCenter2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox channelWidth;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox channelCenter1;
-        private System.Windows.Forms.TextBox boundaryFrequency;
-        private System.Windows.Forms.TextBox TVoltage_dB;
+        private ModifiedTextBox TVoltage;
+        private ModifiedTextBox TVoltage_dB;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radDispSensFreq;
         private System.Windows.Forms.RadioButton radVelSensFreq;
@@ -878,28 +537,22 @@ namespace VibrationCalculatorFormApp {
         private System.Windows.Forms.RadioButton radiDisplacementPikPik;
         private System.Windows.Forms.RadioButton radDisplacementPik;
         private System.Windows.Forms.RadioButton radDisplacementRMS;
-        private System.Windows.Forms.TextBox TDisplacement;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox TDisplacement_dB;
+        private ModifiedTextBox TDisplacement;
+        private ModifiedTextBox TDisplacement_dB;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox gBVelocity;
         private System.Windows.Forms.RadioButton radVelocityPikPik;
         private System.Windows.Forms.RadioButton radVelocityPik;
         private System.Windows.Forms.RadioButton radVelocityRMS;
-        private System.Windows.Forms.TextBox TVelocity;
-        private System.Windows.Forms.Button BVelocity_dBCopy;
-        private System.Windows.Forms.Button BVelocityCopy;
-        private System.Windows.Forms.TextBox TVelocity_dB;
+        private ModifiedTextBox TVelocity;
+        private ModifiedTextBox TVelocity_dB;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox gBAcceleration;
         private System.Windows.Forms.RadioButton radAccelerationPikPik;
         private System.Windows.Forms.RadioButton radAccelerationPik;
         private System.Windows.Forms.RadioButton radAccelerationRMS;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button BAccelerationCopy;
-        private System.Windows.Forms.TextBox TAcceleration;
-        private System.Windows.Forms.TextBox TAcceleration_dB;
+        private ModifiedTextBox TAcceleration;
+        private ModifiedTextBox TAcceleration_dB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
     }
