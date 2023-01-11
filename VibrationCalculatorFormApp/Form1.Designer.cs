@@ -450,6 +450,7 @@ namespace VibrationCalculatorFormApp {
             this.radAccelerationRMS.TabStop = true;
             this.radAccelerationRMS.Text = "СКЗ";
             this.radAccelerationRMS.UseVisualStyleBackColor = true;
+            this.radAccelerationRMS.CheckedChanged += new System.EventHandler(this.radAccelerationRMS_CheckedChanged);
             // 
             // TAcceleration
             // 
@@ -457,6 +458,7 @@ namespace VibrationCalculatorFormApp {
             this.TAcceleration.Name = "TAcceleration";
             this.TAcceleration.Size = new System.Drawing.Size(86, 20);
             this.TAcceleration.TabIndex = 7;
+            this.TAcceleration.TextChanged += new System.EventHandler(this.TAcceleration_TextChanged);
             // 
             // TAcceleration_dB
             // 
