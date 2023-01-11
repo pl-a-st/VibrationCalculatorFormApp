@@ -90,5 +90,11 @@
   <ItemGroup>
     <None Include="Resources\VibroMath.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\VibroMath.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\summary\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

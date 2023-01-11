@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using VibroMath; 
 public enum TextboxIsChangeable {
     Acceleration,
-    Acceleration_dB
+    Acceleration_dB,
+    NotTextbox
 }
 namespace VibrationCalculatorFormApp {
     public partial class Form1 : Form {
@@ -49,7 +50,7 @@ namespace VibrationCalculatorFormApp {
             if (double.TryParse(TSensitivity.Text, out double result)) {
                 VibroCalc.CalcAll(new Sensitivity(result, SenType), Freeze);
             }
-                
+            /// Добавить push textboxes    
         }
 
         private void TFrequency_TextChanged(object sender, EventArgs e) {
@@ -68,8 +69,9 @@ namespace VibrationCalculatorFormApp {
             /// Добавить push textboxes
         }
         private void PushAllTextboxes(TextboxIsChangeable isChangeable) {
-            if(isChangeable != TextboxIsChangeable.Acceleration) {
-                TAcceleration.Text = VibroCalc.Acceleration.Get
+            /// добавил, рассказать
+            if (isChangeable != TextboxIsChangeable.Acceleration) {
+                TAcceleration.Text = VibroCalc.Acceleration.Get(AccType).ToString();
             }
         }
     }
