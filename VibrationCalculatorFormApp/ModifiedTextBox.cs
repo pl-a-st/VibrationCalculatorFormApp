@@ -19,12 +19,11 @@ namespace VibrationCalculatorFormApp {
                     Access = Access.Blocked;
                     Text = LastText;
                     Access = Access.UnLock;
+                    this.SelectionStart = Text.Length;
                     return;
                 }
                 LastText = Text;
-                this.SelectionStart = Text.Length;
                 base.OnTextChanged(e);
-                
             }
         }
         protected override void OnKeyPress(KeyPressEventArgs e) {
