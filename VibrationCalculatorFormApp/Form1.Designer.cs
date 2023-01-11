@@ -36,9 +36,11 @@ namespace VibrationCalculatorFormApp {
             this.radVoltagePikPik = new System.Windows.Forms.RadioButton();
             this.radVoltagePik = new System.Windows.Forms.RadioButton();
             this.radVoltageRMS = new System.Windows.Forms.RadioButton();
-            this.TVoltage = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.TVoltage_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
+            this.TVoltage = new VibrationCalculatorFormApp.ModifiedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radVoltSensFreq = new System.Windows.Forms.RadioButton();
             this.radDispSensFreq = new System.Windows.Forms.RadioButton();
             this.radVelSensFreq = new System.Windows.Forms.RadioButton();
             this.radAccSensFreq = new System.Windows.Forms.RadioButton();
@@ -63,7 +65,6 @@ namespace VibrationCalculatorFormApp {
             this.TAcceleration = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.TAcceleration_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -104,6 +105,7 @@ namespace VibrationCalculatorFormApp {
             this.radSensitivityM.TabIndex = 11;
             this.radSensitivityM.Text = "мВ/м•с ̄ ²";
             this.radSensitivityM.UseVisualStyleBackColor = true;
+            this.radSensitivityM.CheckedChanged += new System.EventHandler(this.radSensitivityM_CheckedChanged);
             // 
             // radSensitivityG
             // 
@@ -116,6 +118,7 @@ namespace VibrationCalculatorFormApp {
             this.radSensitivityG.TabStop = true;
             this.radSensitivityG.Text = "мВ/g";
             this.radSensitivityG.UseVisualStyleBackColor = true;
+            this.radSensitivityG.CheckedChanged += new System.EventHandler(this.radSensitivityG_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -124,7 +127,7 @@ namespace VibrationCalculatorFormApp {
             this.groupBox3.Controls.Add(this.TFrequency);
             this.groupBox3.Location = new System.Drawing.Point(310, 42);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 72);
+            this.groupBox3.Size = new System.Drawing.Size(170, 95);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Частота, Гц";
@@ -138,6 +141,7 @@ namespace VibrationCalculatorFormApp {
             this.radFrequencyRPM.TabIndex = 10;
             this.radFrequencyRPM.Text = "Об./мин.";
             this.radFrequencyRPM.UseVisualStyleBackColor = true;
+            this.radFrequencyRPM.CheckedChanged += new System.EventHandler(this.radFrequencyRPM_CheckedChanged);
             // 
             // radFrequencyHw
             // 
@@ -150,6 +154,7 @@ namespace VibrationCalculatorFormApp {
             this.radFrequencyHw.TabStop = true;
             this.radFrequencyHw.Text = "Гц";
             this.radFrequencyHw.UseVisualStyleBackColor = true;
+            this.radFrequencyHw.CheckedChanged += new System.EventHandler(this.radFrequencyHw_CheckedChanged);
             // 
             // TFrequency
             // 
@@ -165,10 +170,12 @@ namespace VibrationCalculatorFormApp {
             this.groupBox4.Controls.Add(this.radVoltagePikPik);
             this.groupBox4.Controls.Add(this.radVoltagePik);
             this.groupBox4.Controls.Add(this.radVoltageRMS);
+            this.groupBox4.Controls.Add(this.TVoltage_dB);
             this.groupBox4.Controls.Add(this.TVoltage);
-            this.groupBox4.Location = new System.Drawing.Point(516, 98);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Location = new System.Drawing.Point(31, 34);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(188, 72);
+            this.groupBox4.Size = new System.Drawing.Size(353, 72);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Напряжение, мВ";
@@ -182,6 +189,7 @@ namespace VibrationCalculatorFormApp {
             this.radVoltagePikPik.TabIndex = 10;
             this.radVoltagePikPik.Text = "Размах";
             this.radVoltagePikPik.UseVisualStyleBackColor = true;
+            this.radVoltagePikPik.CheckedChanged += new System.EventHandler(this.radVoltagePikPik_CheckedChanged);
             // 
             // radVoltagePik
             // 
@@ -192,6 +200,7 @@ namespace VibrationCalculatorFormApp {
             this.radVoltagePik.TabIndex = 10;
             this.radVoltagePik.Text = "Пик";
             this.radVoltagePik.UseVisualStyleBackColor = true;
+            this.radVoltagePik.CheckedChanged += new System.EventHandler(this.radVoltagePik_CheckedChanged);
             // 
             // radVoltageRMS
             // 
@@ -204,6 +213,15 @@ namespace VibrationCalculatorFormApp {
             this.radVoltageRMS.TabStop = true;
             this.radVoltageRMS.Text = "СКЗ";
             this.radVoltageRMS.UseVisualStyleBackColor = true;
+            this.radVoltageRMS.CheckedChanged += new System.EventHandler(this.radVoltageRMS_CheckedChanged);
+            // 
+            // TVoltage_dB
+            // 
+            this.TVoltage_dB.Location = new System.Drawing.Point(212, 16);
+            this.TVoltage_dB.Name = "TVoltage_dB";
+            this.TVoltage_dB.Size = new System.Drawing.Size(90, 20);
+            this.TVoltage_dB.TabIndex = 15;
+            this.TVoltage_dB.TextChanged += new System.EventHandler(this.TVoltage_dB_TextChanged);
             // 
             // TVoltage
             // 
@@ -212,57 +230,75 @@ namespace VibrationCalculatorFormApp {
             this.TVoltage.Size = new System.Drawing.Size(90, 20);
             this.TVoltage.TabIndex = 7;
             this.TVoltage.Text = "100";
+            this.TVoltage.TextChanged += new System.EventHandler(this.TVoltage_TextChanged);
             // 
-            // TVoltage_dB
+            // label6
             // 
-            this.TVoltage_dB.Location = new System.Drawing.Point(522, 192);
-            this.TVoltage_dB.Name = "TVoltage_dB";
-            this.TVoltage_dB.Size = new System.Drawing.Size(90, 20);
-            this.TVoltage_dB.TabIndex = 15;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(209, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Напряжение, дБ";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radVoltSensFreq);
             this.groupBox1.Controls.Add(this.radDispSensFreq);
             this.groupBox1.Controls.Add(this.radVelSensFreq);
+            this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.radAccSensFreq);
             this.groupBox1.Controls.Add(this.GBDisplacement);
             this.groupBox1.Controls.Add(this.gBVelocity);
             this.groupBox1.Controls.Add(this.gBAcceleration);
             this.groupBox1.Location = new System.Drawing.Point(75, 143);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(435, 266);
+            this.groupBox1.Size = new System.Drawing.Size(405, 364);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Параметры вибрации";
+            this.groupBox1.Text = "Параметры ";
+            // 
+            // radVoltSensFreq
+            // 
+            this.radVoltSensFreq.AutoSize = true;
+            this.radVoltSensFreq.Location = new System.Drawing.Point(13, 60);
+            this.radVoltSensFreq.Name = "radVoltSensFreq";
+            this.radVoltSensFreq.Size = new System.Drawing.Size(14, 13);
+            this.radVoltSensFreq.TabIndex = 20;
+            this.radVoltSensFreq.UseVisualStyleBackColor = true;
+            this.radVoltSensFreq.CheckedChanged += new System.EventHandler(this.radVoltSensFreq_CheckedChanged);
             // 
             // radDispSensFreq
             // 
             this.radDispSensFreq.AutoSize = true;
-            this.radDispSensFreq.Location = new System.Drawing.Point(7, 197);
+            this.radDispSensFreq.Location = new System.Drawing.Point(13, 290);
             this.radDispSensFreq.Name = "radDispSensFreq";
             this.radDispSensFreq.Size = new System.Drawing.Size(14, 13);
             this.radDispSensFreq.TabIndex = 15;
             this.radDispSensFreq.UseVisualStyleBackColor = true;
+            this.radDispSensFreq.CheckedChanged += new System.EventHandler(this.radDispSensFreq_CheckedChanged);
             // 
             // radVelSensFreq
             // 
             this.radVelSensFreq.AutoSize = true;
-            this.radVelSensFreq.Location = new System.Drawing.Point(7, 119);
+            this.radVelSensFreq.Location = new System.Drawing.Point(13, 212);
             this.radVelSensFreq.Name = "radVelSensFreq";
             this.radVelSensFreq.Size = new System.Drawing.Size(14, 13);
             this.radVelSensFreq.TabIndex = 14;
             this.radVelSensFreq.UseVisualStyleBackColor = true;
+            this.radVelSensFreq.CheckedChanged += new System.EventHandler(this.radVelSensFreq_CheckedChanged);
             // 
             // radAccSensFreq
             // 
             this.radAccSensFreq.AutoSize = true;
             this.radAccSensFreq.Checked = true;
-            this.radAccSensFreq.Location = new System.Drawing.Point(7, 41);
+            this.radAccSensFreq.Location = new System.Drawing.Point(13, 134);
             this.radAccSensFreq.Name = "radAccSensFreq";
             this.radAccSensFreq.Size = new System.Drawing.Size(14, 13);
             this.radAccSensFreq.TabIndex = 13;
             this.radAccSensFreq.TabStop = true;
             this.radAccSensFreq.UseVisualStyleBackColor = true;
+            this.radAccSensFreq.CheckedChanged += new System.EventHandler(this.radAccSensFreq_CheckedChanged);
             // 
             // GBDisplacement
             // 
@@ -272,9 +308,9 @@ namespace VibrationCalculatorFormApp {
             this.GBDisplacement.Controls.Add(this.TDisplacement);
             this.GBDisplacement.Controls.Add(this.TDisplacement_dB);
             this.GBDisplacement.Controls.Add(this.label10);
-            this.GBDisplacement.Location = new System.Drawing.Point(25, 175);
+            this.GBDisplacement.Location = new System.Drawing.Point(31, 268);
             this.GBDisplacement.Name = "GBDisplacement";
-            this.GBDisplacement.Size = new System.Drawing.Size(398, 72);
+            this.GBDisplacement.Size = new System.Drawing.Size(353, 72);
             this.GBDisplacement.TabIndex = 12;
             this.GBDisplacement.TabStop = false;
             this.GBDisplacement.Text = "Перемещение, мкм";
@@ -288,6 +324,7 @@ namespace VibrationCalculatorFormApp {
             this.radiDisplacementPikPik.TabIndex = 10;
             this.radiDisplacementPikPik.Text = "Размах";
             this.radiDisplacementPikPik.UseVisualStyleBackColor = true;
+            this.radiDisplacementPikPik.CheckedChanged += new System.EventHandler(this.radiDisplacementPikPik_CheckedChanged);
             // 
             // radDisplacementPik
             // 
@@ -298,6 +335,7 @@ namespace VibrationCalculatorFormApp {
             this.radDisplacementPik.TabIndex = 10;
             this.radDisplacementPik.Text = "Пик";
             this.radDisplacementPik.UseVisualStyleBackColor = true;
+            this.radDisplacementPik.CheckedChanged += new System.EventHandler(this.radDisplacementPik_CheckedChanged);
             // 
             // radDisplacementRMS
             // 
@@ -310,6 +348,7 @@ namespace VibrationCalculatorFormApp {
             this.radDisplacementRMS.TabStop = true;
             this.radDisplacementRMS.Text = "СКЗ";
             this.radDisplacementRMS.UseVisualStyleBackColor = true;
+            this.radDisplacementRMS.CheckedChanged += new System.EventHandler(this.radDisplacementRMS_CheckedChanged);
             // 
             // TDisplacement
             // 
@@ -342,9 +381,9 @@ namespace VibrationCalculatorFormApp {
             this.gBVelocity.Controls.Add(this.TVelocity);
             this.gBVelocity.Controls.Add(this.TVelocity_dB);
             this.gBVelocity.Controls.Add(this.label8);
-            this.gBVelocity.Location = new System.Drawing.Point(25, 97);
+            this.gBVelocity.Location = new System.Drawing.Point(31, 190);
             this.gBVelocity.Name = "gBVelocity";
-            this.gBVelocity.Size = new System.Drawing.Size(398, 72);
+            this.gBVelocity.Size = new System.Drawing.Size(353, 72);
             this.gBVelocity.TabIndex = 12;
             this.gBVelocity.TabStop = false;
             this.gBVelocity.Text = "Скорость, мм/с";
@@ -358,6 +397,7 @@ namespace VibrationCalculatorFormApp {
             this.radVelocityPikPik.TabIndex = 10;
             this.radVelocityPikPik.Text = "Размах";
             this.radVelocityPikPik.UseVisualStyleBackColor = true;
+            this.radVelocityPikPik.CheckedChanged += new System.EventHandler(this.radVelocityPikPik_CheckedChanged);
             // 
             // radVelocityPik
             // 
@@ -368,6 +408,7 @@ namespace VibrationCalculatorFormApp {
             this.radVelocityPik.TabIndex = 10;
             this.radVelocityPik.Text = "Пик";
             this.radVelocityPik.UseVisualStyleBackColor = true;
+            this.radVelocityPik.CheckedChanged += new System.EventHandler(this.radVelocityPik_CheckedChanged);
             // 
             // radVelocityRMS
             // 
@@ -380,6 +421,7 @@ namespace VibrationCalculatorFormApp {
             this.radVelocityRMS.TabStop = true;
             this.radVelocityRMS.Text = "СКЗ";
             this.radVelocityRMS.UseVisualStyleBackColor = true;
+            this.radVelocityRMS.CheckedChanged += new System.EventHandler(this.radVelocityRMS_CheckedChanged);
             // 
             // TVelocity
             // 
@@ -412,9 +454,9 @@ namespace VibrationCalculatorFormApp {
             this.gBAcceleration.Controls.Add(this.TAcceleration);
             this.gBAcceleration.Controls.Add(this.TAcceleration_dB);
             this.gBAcceleration.Controls.Add(this.label4);
-            this.gBAcceleration.Location = new System.Drawing.Point(25, 19);
+            this.gBAcceleration.Location = new System.Drawing.Point(31, 112);
             this.gBAcceleration.Name = "gBAcceleration";
-            this.gBAcceleration.Size = new System.Drawing.Size(398, 72);
+            this.gBAcceleration.Size = new System.Drawing.Size(353, 72);
             this.gBAcceleration.TabIndex = 12;
             this.gBAcceleration.TabStop = false;
             this.gBAcceleration.Text = "Ускорение, м/с²";
@@ -428,6 +470,7 @@ namespace VibrationCalculatorFormApp {
             this.radAccelerationPikPik.TabIndex = 10;
             this.radAccelerationPikPik.Text = "Размах";
             this.radAccelerationPikPik.UseVisualStyleBackColor = true;
+            this.radAccelerationPikPik.CheckedChanged += new System.EventHandler(this.radAccelerationPikPik_CheckedChanged);
             // 
             // radAccelerationPik
             // 
@@ -438,6 +481,7 @@ namespace VibrationCalculatorFormApp {
             this.radAccelerationPik.TabIndex = 10;
             this.radAccelerationPik.Text = "Пик";
             this.radAccelerationPik.UseVisualStyleBackColor = true;
+            this.radAccelerationPik.CheckedChanged += new System.EventHandler(this.radAccelerationPik_CheckedChanged);
             // 
             // radAccelerationRMS
             // 
@@ -466,6 +510,7 @@ namespace VibrationCalculatorFormApp {
             this.TAcceleration_dB.Name = "TAcceleration_dB";
             this.TAcceleration_dB.Size = new System.Drawing.Size(89, 20);
             this.TAcceleration_dB.TabIndex = 7;
+            this.TAcceleration_dB.TextChanged += new System.EventHandler(this.TAcceleration_dB_TextChanged);
             // 
             // label4
             // 
@@ -476,28 +521,17 @@ namespace VibrationCalculatorFormApp {
             this.label4.TabIndex = 3;
             this.label4.Text = "Ускорение,  дБ";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(519, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Напряжение, дБ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(519, 536);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.TVoltage_dB);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label6);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -513,7 +547,6 @@ namespace VibrationCalculatorFormApp {
             this.gBAcceleration.ResumeLayout(false);
             this.gBAcceleration.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -558,6 +591,7 @@ namespace VibrationCalculatorFormApp {
         private ModifiedTextBox TAcceleration_dB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton radVoltSensFreq;
     }
 }
 
