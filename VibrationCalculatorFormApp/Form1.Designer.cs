@@ -65,6 +65,7 @@ namespace VibrationCalculatorFormApp {
             this.TAcceleration = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.TAcceleration_dB = new VibrationCalculatorFormApp.ModifiedTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -79,7 +80,7 @@ namespace VibrationCalculatorFormApp {
             this.groupBox2.Controls.Add(this.TSensitivity);
             this.groupBox2.Controls.Add(this.radSensitivityM);
             this.groupBox2.Controls.Add(this.radSensitivityG);
-            this.groupBox2.Location = new System.Drawing.Point(75, 42);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(225, 95);
             this.groupBox2.TabIndex = 17;
@@ -125,7 +126,7 @@ namespace VibrationCalculatorFormApp {
             this.groupBox3.Controls.Add(this.radFrequencyRPM);
             this.groupBox3.Controls.Add(this.radFrequencyHw);
             this.groupBox3.Controls.Add(this.TFrequency);
-            this.groupBox3.Location = new System.Drawing.Point(310, 42);
+            this.groupBox3.Location = new System.Drawing.Point(247, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(170, 95);
             this.groupBox3.TabIndex = 18;
@@ -251,7 +252,7 @@ namespace VibrationCalculatorFormApp {
             this.groupBox1.Controls.Add(this.GBDisplacement);
             this.groupBox1.Controls.Add(this.gBVelocity);
             this.groupBox1.Controls.Add(this.gBAcceleration);
-            this.groupBox1.Location = new System.Drawing.Point(75, 143);
+            this.groupBox1.Location = new System.Drawing.Point(12, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(405, 364);
             this.groupBox1.TabIndex = 13;
@@ -521,11 +522,22 @@ namespace VibrationCalculatorFormApp {
             this.label4.TabIndex = 3;
             this.label4.Text = "Ускорение,  дБ";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(447, 428);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 48);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 536);
+            this.ClientSize = new System.Drawing.Size(581, 536);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -592,6 +604,7 @@ namespace VibrationCalculatorFormApp {
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton radVoltSensFreq;
+        private System.Windows.Forms.Button button1;
     }
 }
 

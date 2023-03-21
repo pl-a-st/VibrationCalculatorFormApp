@@ -64,12 +64,10 @@ namespace VibrationCalculatorFormApp {
         }
 
         private void radAccelerationRMS_CheckedChanged(object sender, EventArgs e) {
-            /// Добавил рассказать
             if (radAccelerationRMS.Checked) {
                 AccType = SignalParametrType.RMS;
             }
             PushAllTextboxes(TextboxIsChangeable.NotTextbox);
-            /// Добавить push textboxes
         }
         private void PushAllTextboxes(TextboxIsChangeable isChangeable) {
             if (isChangeable != TextboxIsChangeable.Sensitivity) {
@@ -139,7 +137,7 @@ namespace VibrationCalculatorFormApp {
 
         private void radFrequencyRPM_CheckedChanged(object sender, EventArgs e) {
             if (radFrequencyRPM.Checked) {
-                FreqType = FrequencyType.HZ;
+                FreqType = FrequencyType.RPM;
             }
             PushAllTextboxes(TextboxIsChangeable.NotTextbox);
         }
@@ -224,13 +222,13 @@ namespace VibrationCalculatorFormApp {
         }
 
         private void radVelSensFreq_CheckedChanged(object sender, EventArgs e) {
-            if (radAccSensFreq.Checked) {
+            if (radVelSensFreq.Checked) {
                 Freeze = Freeze.Velocity;
             }
         }
 
         private void radDispSensFreq_CheckedChanged(object sender, EventArgs e) {
-            if (radAccSensFreq.Checked) {
+            if (radDispSensFreq.Checked) {
                 Freeze = Freeze.Displacement;
             }
         }
@@ -254,6 +252,30 @@ namespace VibrationCalculatorFormApp {
                 VibroCalc.CalcAll(new Acceleration(result, SignalParametrType.dB));
             }
             PushAllTextboxes(TextboxIsChangeable.Acceleration_dB);
+        }
+        static ComboBox ComboBox = new ComboBox();
+        private void button1_Click(object sender, EventArgs e) {
+            Form1 form1 = new Form1();
+            form1.Show();
+            Form form = new Form();
+            Button button = new Button();
+            button.Location = new Point(form.Width/2, form.Height/2);
+            button.Text = "Кнопка";
+            ComboBox comboBox = new ComboBox();
+            ComboBox = comboBox;
+            form.Controls.Add(button);
+            form.Controls.Add(comboBox);
+            button.Click += Button_Click;
+            button.Click += Button_Click1;
+            form.ShowDialog();
+            void Button_Click(object senderBut, EventArgs eBut) {
+                comboBox.Items.Add("Третий");
+            }
+        }
+
+        private void Button_Click1(object sender, EventArgs e) {
+            ComboBox.Items.Add("Первый");
+            ComboBox.Items.Add("Второй"); ;
         }
     }
 }
